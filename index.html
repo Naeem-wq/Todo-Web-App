@@ -52,19 +52,26 @@
     <header>
 
         <h1 id="heading">Todo App</h1>
-        
-            <input type="text" placeholder="Add Task" id="userInput">
 
-            <button id="addBtn" class="add">+</button>
+        <div id="input">
+            <input type="text" placeholder="Add Task" id="userInput">
+            <button id="addBtn" class="add" onclick="addUser()">+</button>
+        </div>
+
+        <div id="calendar">
+            <input type="date" id="dateHeading">
+        </div>
 
     </header>
 
 
     <main>
 
-        <h4>Tasks</h4>
+        <h4 id="tasks">Tasks:</h4>
 
-        
+        <div>
+            <h5 id="display"></h5>
+        </div>
 
     </main>
 
