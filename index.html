@@ -55,8 +55,7 @@
 
         <div id="input">
             <input type="text" placeholder="Add Task" id="userInput">
-            <button id="addBtn" class="add" onclick="addUser()">+</button>
-            <button id="sortBtn" onclick="sortTaskArr()">Sort</button>
+            <button id="addBtn" class="buttons" onclick="addUser()"><i class="fa-solid fa-circle-plus"></i></button>
         </div>
 
         <div id="calendar">
@@ -68,7 +67,14 @@
 
     <main>
 
-        <h4 id="tasks">Tasks:</h4>
+        <div id="checklist">
+            <i class="fa-solid fa-clipboard-list"></i>
+        </div>
+
+        <div id="functionBtns">
+            <button id="sortBtn" class="buttons" onclick="sortTaskArr()"><i class="fa-solid fa-arrow-down-a-z"></i></button>
+            <button id="clearBtn" class="buttons"><i class="fa-solid fa-arrows-rotate"></i></button>
+        </div>
 
         <div id="display">
 

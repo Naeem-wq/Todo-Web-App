@@ -33,7 +33,6 @@ header {
 
 #input {
     padding: 10px 20px;
-    /* margin-left: 6%; */
     margin-bottom: 1%;
     border-radius: 20px;
 }
@@ -46,13 +45,6 @@ header {
 }
 
 
-#addBtn {
-    color: black;
-    border-radius: 100%;
-    padding: 8px 17px;
-}
-
-
 /* Main */
 
 body {
@@ -60,12 +52,23 @@ body {
     background-color: rgb(64, 77, 77);
 }
 
-#tasks {
+#checklist{
     text-align: left;
-    padding-left: 20%;
+    font-size: 50px;
+    padding-left: 11%;
     padding-top: 20px;
-    margin-bottom: 6px;
 }
+
+.buttons{
+    border-radius: 20px;
+    padding: 8px 17px;
+}
+
+#functionBtns{
+    text-align: right;
+    padding-right: 11%;
+}
+
 
 #display {
     background-color: aliceblue;
