@@ -13,12 +13,15 @@ todaysDate.innerHTML = dateHeader;
  *************************/
 
 let inputText;
+let inputDate;
 let tasksArr = [];
 const todoWebApp = "todo-web-app";
 
 function addUser() {
   inputText = document.getElementById("userInput").value;
-  tasksArr.push(inputText);
+  inputDate = document.getElementById("dateHeading").value;
+
+  tasksArr.push(inputText,inputDate);
 
   document.getElementById("display").innerHTML = "";
 
