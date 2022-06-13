@@ -52,6 +52,7 @@
     <header>
 
         <h1 id="heading">Todo App</h1>
+        <span class="headerDate" id="headerDate"></span>
 
         <div id="input">
             <input type="text" placeholder="Add Task" id="userInput">
@@ -67,13 +68,10 @@
 
     <main>
 
-        <div id="checklist">
-            <i class="fa-solid fa-clipboard-list"></i>
-        </div>
-
         <div id="functionBtns">
-            <button id="sortBtn" class="buttons" onclick="sortTaskArr()"><i class="fa-solid fa-arrow-down-a-z"></i></button>
-            <button id="clearBtn" class="buttons"><i class="fa-solid fa-arrows-rotate"></i></button>
+            <button id="sortBtn" class="buttons" onclick="sortTaskArr()"><i
+                    class="fa-solid fa-arrow-down-a-z"></i></button>
+            <button id="clearBtn" class="buttons" onclick="clearLS()"><i class="fa-solid fa-arrows-rotate"></i></button>
         </div>
 
         <div id="display">

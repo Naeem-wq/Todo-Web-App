@@ -1,15 +1,20 @@
 * {
     box-sizing: border-box;
     margin: 0%;
-    font-family: 'Joan', serif;
+    font-family: 'BioRhyme', serif;
+    color: rgb(64, 77, 80);
 }
 
 /* Header */
 
 #heading {
-    padding-bottom: 1em;
+    font-family: 'Grape Nuts', cursive;
 }
 
+.headerDate {
+    font-size: 30px;
+    font-family: 'Grape Nuts', cursive;
+}
 
 header {
     text-align: center;
@@ -24,11 +29,12 @@ header {
 }
 
 #userInput {
+    background-color: aliceblue;
     border-radius: 20px;
     text-align: center;
     min-width: 25%;
-    padding: 7px;
-    margin-right: 50px;
+    padding: 10px;
+    margin-left: 5%;
 }
 
 #input {
@@ -38,10 +44,9 @@ header {
 }
 
 #dateHeading {
-    color: black;
+    background-color: aliceblue;
     border-radius: 20px;
     text-align: center;
-    margin-right: 5.5%;
 }
 
 
@@ -52,19 +57,14 @@ body {
     background-color: rgb(64, 77, 77);
 }
 
-#checklist{
-    text-align: left;
-    font-size: 50px;
-    padding-left: 11%;
-    padding-top: 20px;
-}
-
-.buttons{
+.buttons {
+    font-size: 20px;
+    margin-top: 20px;
     border-radius: 20px;
     padding: 8px 17px;
 }
 
-#functionBtns{
+#functionBtns {
     text-align: right;
     padding-right: 11%;
 }

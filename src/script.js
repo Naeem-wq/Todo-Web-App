@@ -1,3 +1,17 @@
+/*************************
+ * TODAY'S DATE
+ *************************/
+
+const date = new Date();
+let dateHeader = date.toDateString();
+
+const todaysDate = document.querySelector("#headerDate");
+todaysDate.innerHTML = dateHeader;
+
+/*************************
+ * VARIABLES
+ *************************/
+
 let inputText;
 let tasksArr = [];
 const todoWebApp = "todo-web-app";
@@ -6,14 +20,36 @@ function addUser() {
   inputText = document.getElementById("userInput").value;
   tasksArr.push(inputText);
 
-  for (let i = 0; i < tasksArr.length; i++) {
-    let ourDisplayText = document.createElement("h5");
-    let text = document.createTextNode(tasksArr);
-    ourDisplayText.appendChild(text);
-    document.getElementById("display").appendChild(ourDisplayText);
+  document.getElementById("display").innerHTML = "";
+
+  if (inputText !== "") {
+    for (let i = 0; i < tasksArr.length; i++) {
+      const ourDisplayText = document.createElement("h5");
+      const text = document.createTextNode(tasksArr[i]);
+      ourDisplayText.appendChild(text);
+      document.getElementById("display").appendChild(ourDisplayText);
+    }
+  } else if (inputText === "") {
+    alert("Please add a task!");
   }
 
   addLocalStorage();
+}
+
+/**********************************
+ *   Sort Tasks Alphabetically
+ *********************************/
+function sortTaskArr() {
+  document.getElementById("display").innerHTML = "";
+
+  tasksArr.sort();
+
+  for (let i = 0; i < tasksArr.length; i++) {
+    const ourDisplayText = document.createElement("h5");
+    const text = document.createTextNode(tasksArr[i]);
+    ourDisplayText.appendChild(text);
+    document.getElementById("display").appendChild(ourDisplayText);
+  }
 }
 
 /**********************************
@@ -24,4 +60,13 @@ function addLocalStorage() {
   localStorage.setItem(todoWebApp, tasksArr);
   tasksArr = JSON.parse(localStorage.getItem(todoWebApp));
 }
-// let myStorage = localStorage.setItem("Tasks",tasksArr);
+
+/**********************************
+ *     Clear Local Storage
+ *********************************/
+
+function clearLS() {
+  localStorage.clear();
+  tasksArr = [];
+  document.getElementById("display").innerHTML = " ";
+}
