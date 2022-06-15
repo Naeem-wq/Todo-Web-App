@@ -5,7 +5,9 @@
     color: rgb(64, 77, 80);
 }
 
-/* Header */
+/*************************
+ *      Header
+ *************************/
 
 #heading {
     font-family: 'Grape Nuts', cursive;
@@ -50,7 +52,9 @@ header {
 }
 
 
-/* Main */
+/*************************
+ *        Main
+ *************************/
 
 body {
     text-align: center;
@@ -77,4 +81,11 @@ body {
     padding: 2rem;
 }
 
-/* Footer */
+/*************************
+ *        Footer
+ *************************/
+
+#copyright{
+    color: white;
+    position: static; 
+}
