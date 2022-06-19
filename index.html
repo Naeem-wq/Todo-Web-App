@@ -5,13 +5,11 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <!-- Page Title -->
-    <title>Todo Web App</title>
-
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Page Title -->
+    <title>Todo Web App</title>
 
     <!-- Favicon link -->
     <link rel="apple-touch-icon" sizes="180x180" href="./favicon_io/apple-touch-icon.png">
@@ -49,14 +47,16 @@
 
 <body>
 
-
     <!-- Header Section -->
     <header>
 
-        <h1 id="heading">Todo App</h1>
-        <span class="headerDate" id="headerDate"></span>
+        <div class="headerSection">
+            <h1 id="heading">Todo App</h1>
+            <span class="headerDate" id="headerDate"></span>
+        </div>
 
-        <div id="input">
+
+        <div id="inputSection">
             <input type="text" placeholder="Add Task" id="userInput">
             <button id="addBtn" class="buttons" onclick="addUser()"><i class="fa-solid fa-circle-plus"></i></button>
         </div>
@@ -71,14 +71,20 @@
     <!-- Start of Main Section -->
     <main>
 
-        <div id="functionBtns">
-            <button id="sortBtn" class="buttons" onclick="sortTaskArr()"><i
-                    class="fa-solid fa-arrow-down-a-z"></i></button>
-            <button id="clearBtn" class="buttons" onclick="clearLS()"><i class="fa-solid fa-arrows-rotate"></i></button>
+        <div class="functionBtns">
+            <button id="sortBtn" class="buttons" onclick="sortTaskArr()">
+                <i class="fa-solid fa-arrow-down-a-z"></i>
+            </button>
+
+            <button id="clearBtn" class="buttons" onclick="clearLS()">
+                <i class="fa-solid fa-arrows-rotate"></i>
+            </button>
         </div>
 
-        <div id="display">
-
+        <div class="container">
+            <ul class="taskList" id="listTasks">
+                <!-- Tasks will display here -->
+            </ul>
         </div>
 
     </main>

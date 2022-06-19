@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0%;
     font-family: 'BioRhyme', serif;
-    color: rgb(64, 77, 80);
+    color: #3a4a54b7;
 }
 
 /*************************
@@ -31,26 +31,25 @@ header {
 }
 
 #userInput {
-    background-color: aliceblue;
-    border-radius: 20px;
+    background-color: #d8d9da;
+    border-radius: 10px;
     text-align: center;
     min-width: 25%;
     padding: 10px;
     margin-left: 5%;
+    border: none;
 }
 
-#input {
+#inputSection {
     padding: 10px 20px;
     margin-bottom: 1%;
-    border-radius: 20px;
 }
 
 #dateHeading {
-    background-color: aliceblue;
+    background-color: #d8d9da;
     border-radius: 20px;
     text-align: center;
 }
-
 
 /*************************
  *        Main
@@ -64,28 +63,139 @@ body {
 .buttons {
     font-size: 20px;
     margin-top: 20px;
-    border-radius: 20px;
-    padding: 8px 17px;
+    background-color: #d8d9da;
+    border: none;
+    border-radius: 10px;
+    height: 45px;
+    width: 45px;
 }
 
-#functionBtns {
+.buttons:hover {
+    background-color: #a0a0a0;
+}
+
+.functionBtns {
     text-align: right;
     padding-right: 11%;
 }
 
-
-#display {
-    background-color: aliceblue;
-    margin: 1% 10%;
-    border-radius: 20px;
-    padding: 2rem;
+.container {
+    margin-top: 2%;
 }
+
+.taskList {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+    list-style: none;
+}
+
+.listItem {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.listTaskText {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+    background-color: #fff;
+    cursor: pointer;
+    width: 320px;
+    border-radius: 10px 0 0 10px;
+}
+
+.listItemCompleted {
+    text-decoration: line-through;
+    background-color: #d8d9da;
+}
+
+.completed {
+    filter: opacity(50%);
+}
+
+.taskText {
+    text-align: start;
+}
+
+.taskHeadingText {
+    font-size: 18px;
+    max-width: 270px;
+}
+
+.taskDateText {
+    font-size: 12px;
+    color: #999;
+}
+
+.editTaskBtn {
+    margin-left: 3px;
+}
+
+.deleteTaskBtn,
+.editTaskBtn {
+    background-color: #fff;
+    cursor: pointer;
+    height: 50px;
+    width: 45px;
+    border: none;
+}
+
+.deleteTaskBtn {
+    border-radius: 0 15px 10px 0;
+}
+
+.listTaskBtns {
+    display: flex;
+    gap: 3px;
+}
+
+/*                  Media Queries to follow 
+
+
+
+*                               A     
+*                               T
+*                               T
+*                               E
+*                               N
+*                               T
+*                               I
+*                               O
+*                               N
+
+
+
+*/
+
 
 /*************************
  *        Footer
  *************************/
 
-#copyright{
+#copyright {
     color: white;
-    position: static; 
+    position: static;
 }
+
+/*                 Possible Animations to follow 
+
+
+
+*                               A     
+*                               T
+*                               T
+*                               E
+*                               N
+*                               T
+*                               I
+*                               O
+*                               N
+
+
+
+*/
