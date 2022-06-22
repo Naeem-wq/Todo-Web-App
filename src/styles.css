@@ -9,13 +9,44 @@
  *      Header
  *************************/
 
-#heading {
+.headerPopUp{
     font-family: 'Grape Nuts', cursive;
+    font-weight: bold;
+	animation: headerPopUp 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
-.headerDate {
+@keyframes headerPopUp {
+    0% {
+      transform: translateY(0);
+      transform-origin: 50% 50%;
+      text-shadow: none;
+    }
+    100% {
+      transform: translateY(-20px);
+      transform-origin: 50% 50%;
+      text-shadow: 0 1px 0 #000000, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc;
+    }
+  }
+
+#addBtn:hover{
+    animation: addBtn 3s ease-in-out infinite both;
+}
+
+@keyframes addBtn {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+
+#headerDate {
     font-size: 30px;
-    font-family: 'Grape Nuts', cursive;
 }
 
 header {
@@ -65,7 +96,7 @@ body {
     margin-top: 20px;
     background-color: #d8d9da;
     border: none;
-    border-radius: 10px;
+    border-radius: 50%;
     height: 45px;
     width: 45px;
 }
@@ -182,20 +213,21 @@ body {
     position: static;
 }
 
-/*                 Possible Animations to follow 
+@keyframes copyrightExpand {
+    0% {
+      letter-spacing: -0.5em;
+      transform: translateZ(-700px);
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      transform: translateZ(0);
+      opacity: 1;
+    }
+  }
 
-
-
-*                               A     
-*                               T
-*                               T
-*                               E
-*                               N
-*                               T
-*                               I
-*                               O
-*                               N
-
-
-
-*/
+  .copyrightExpand {
+	animation: copyrightExpand 4s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
