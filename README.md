@@ -23,11 +23,7 @@ Some of the features that comes with the app are as fellows:
 This app is still being developed so there's still a few things that needs to be added.
 Some things include:
 
-* Some Animations
 * Media Queries
-* Some hover effects
-* Possibly add Session Storage
-* Needs lots of comments
 ## Deployment Link
 
 Below is the Deployment Link :
