@@ -21,9 +21,11 @@ Some of the features that comes with the app are as fellows:
 ## Features to come:
 
 This app is still being developed so there's still a few things that needs to be added.
-Some things include:
+These things include:
 
-* Media Queries
+* Fixing the edit function. 
+* Making the web app more responsive.
+
 ## Deployment Link
 
 Below is the Deployment Link :
