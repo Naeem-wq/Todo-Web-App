@@ -185,23 +185,23 @@ body {
     gap: 3px;
 }
 
-/*                  Media Queries to follow 
+/*************************
+ *     Media Queries
+ *************************/
 
+@media (max-width: 450px){
+    .listTaskText{
+        width: 200px;
+    }
 
+    #inputSection{
+        width: auto;
+    }
 
-*                               A     
-*                               T
-*                               T
-*                               E
-*                               N
-*                               T
-*                               I
-*                               O
-*                               N
-
-
-
-*/
+    .editTaskBtn, .deleteTaskBtn{
+        font-size: small;
+    }
+}
 
 
 /*************************
