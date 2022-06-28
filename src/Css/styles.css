@@ -9,41 +9,44 @@
  *      Header
  *************************/
 
-.headerPopUp{
+.headerPopUp {
     font-family: 'Grape Nuts', cursive;
     font-weight: bold;
-	animation: headerPopUp 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: headerPopUp 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 @keyframes headerPopUp {
     0% {
-      transform: translateY(0);
-      transform-origin: 50% 50%;
-      text-shadow: none;
+        transform: translateY(0);
+        transform-origin: 50% 50%;
+        text-shadow: none;
     }
-    100% {
-      transform: translateY(-20px);
-      transform-origin: 50% 50%;
-      text-shadow: 0 1px 0 #000000, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc;
-    }
-  }
 
-#addBtn:hover{
+    100% {
+        transform: translateY(-20px);
+        transform-origin: 50% 50%;
+        text-shadow: 0 1px 0 #000000, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc;
+    }
+}
+
+#addBtn:hover {
     animation: addBtn 3s ease-in-out infinite both;
 }
 
 @keyframes addBtn {
     0% {
-      transform: scale(1);
+        transform: scale(1);
     }
+
     50% {
-      transform: scale(1.1);
+        transform: scale(1.1);
     }
+
     100% {
-      transform: scale(1);
+        transform: scale(1);
     }
-  }
-  
+}
+
 
 #headerDate {
     font-size: 30px;
@@ -53,7 +56,7 @@ header {
     text-align: center;
     padding-top: 3.5em;
     padding-bottom: 2em;
-    background-image: url("../images/darkBackground.jpg");
+    background-image: url("/images/darkBackground.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
@@ -189,16 +192,16 @@ body {
  *     Media Queries
  *************************/
 
-@media (max-width: 450px){
-    .listTaskText{
+@media (max-width: 450px) {
+    .listTaskText {
         width: 200px;
     }
 
-    #inputSection{
+    #inputSection {
         width: auto;
     }
 
-    .editTaskBtn, .deleteTaskBtn{
+    .editTaskBtn, .deleteTaskBtn {
         font-size: small;
     }
 }
@@ -215,19 +218,25 @@ body {
 
 @keyframes copyrightExpand {
     0% {
-      letter-spacing: -0.5em;
-      transform: translateZ(-700px);
-      opacity: 0;
+        letter-spacing: -0.5em;
+        transform: translateZ(-700px);
+        opacity: 0;
     }
-    40% {
-      opacity: 0.6;
-    }
-    100% {
-      transform: translateZ(0);
-      opacity: 1;
-    }
-  }
 
-  .copyrightExpand {
-	animation: copyrightExpand 4s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    40% {
+        opacity: 0.6;
+    }
+
+    100% {
+        transform: translateZ(0);
+        opacity: 1;
+    }
+}
+
+.copyrightExpand {
+    animation: copyrightExpand 4s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+#spongeBob {
+    height: 80px;
 }

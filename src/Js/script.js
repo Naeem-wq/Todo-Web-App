@@ -126,7 +126,7 @@ function addUser() {
     // Adds list element to the DOM
     taskList.appendChild(listElement);
 
-    // Task Completed (this will be striked through)
+    // Task Completed (this task will be striked through)
     taskText.addEventListener("click", function () {
       taskText.classList.toggle("listItemCompleted");
       listElement.classList.toggle("completed");
