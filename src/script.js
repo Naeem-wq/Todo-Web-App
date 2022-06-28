@@ -110,7 +110,7 @@ function addUser() {
       <i class="fa-solid fa-pencil"></i>
       </button>
       <button id="deleteTaskBtn" class="deleteTaskBtn">
-      <i class="fa-solid fa-trash-can"></i>
+      <i class="fa-solid fa-x"></i>
       </button>
     </div>`;
 
