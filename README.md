@@ -22,12 +22,11 @@ Some of the features that comes with the app are as fellows:
 
 This app is still being developed so there's still a few things that needs to be added.
 These things include:
-
-* Fixing the edit function. 
-* Fix bugs. Specifically when deleting a task. It's currently not deleting it from local storage. Only when clearing local storage. 
+ 
+* Fix bugs.
 * Making the web app more responsive.
 
 ## Deployment Link
 
 Below is the Deployment Link :
-* https://naeem-wq.github.io/Todo-Web-App/
+* Link to follow soon.
