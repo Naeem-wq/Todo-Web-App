@@ -29,25 +29,6 @@
     }
 }
 
-#addBtn:hover {
-    animation: addBtn 3s ease-in-out infinite both;
-}
-
-@keyframes addBtn {
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.1);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-}
-
-
 #headerDate {
     font-size: 30px;
 }
@@ -55,7 +36,6 @@
 header {
     text-align: center;
     padding-top: 3.5em;
-    padding-bottom: 2em;
     background-image: url("/images/darkBackground.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -64,30 +44,84 @@ header {
     border-radius: 0px 0px 80px 80px;
 }
 
-#userInput {
-    background-color: #d8d9da;
-    border-radius: 10px;
-    text-align: center;
-    min-width: 25%;
-    padding: 10px;
-    margin-left: 5%;
-    border: none;
-}
-
-#inputSection {
-    padding: 10px 20px;
-    margin-bottom: 1%;
-}
-
-#dateHeading {
-    background-color: #d8d9da;
-    border-radius: 20px;
-    text-align: center;
+#copyright {
+    font-size: larger;
+    color: #00252e;
+    font-weight: bolder;
+    text-shadow: gray 0 1px;
+    margin-top: 4%;
 }
 
 /*************************
  *        Main
  *************************/
+
+/* Modal */
+
+.modal-open {
+    filter: blur(3px);
+}
+
+.newTaskDialog {
+    color: #fff;
+    border: none;
+    width: 400px;
+    margin: auto;
+    border-radius: 10px;
+    background-color: rgb(64, 77, 77);
+    position: relative;
+}
+
+.modalHeading {
+    color: #fff;
+    font-weight: 400px;
+    margin-bottom: 12px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 18px;
+}
+
+.taskInput {
+    height: 36px;
+    width: 250px;
+    padding: 0 12px;
+    background-color: #e7e8eb;
+    border: none;
+    border-radius: 5px;
+}
+
+.exitBtn {
+    color: #fff;
+    font-size: 18px;
+    position: absolute;
+    top: 4%;
+    right: 2%;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.addNewTaskBtn {
+    font-size: 20px;
+    background-color: #d8d9da;
+    border: none;
+    border-radius: 50%;
+    height: 45px;
+    width: 45px;
+    cursor: pointer;
+}
+
+.addNewTaskBtn:hover {
+    background-color: #a0a0a0;
+}
+
+/* Main and Body */
 
 body {
     text-align: center;
@@ -102,6 +136,7 @@ body {
     border-radius: 50%;
     height: 45px;
     width: 45px;
+    cursor: pointer;
 }
 
 .buttons:hover {
@@ -113,7 +148,7 @@ body {
     padding-right: 11%;
 }
 
-.container {
+.taskContainer {
     margin-top: 2%;
 }
 
@@ -204,39 +239,63 @@ body {
     .editTaskBtn, .deleteTaskBtn {
         font-size: small;
     }
+
+    #btnAddTask {
+        position: fixed;
+        top: 27.8%;
+        left: 4%;
+    }
+
+    #spongeBob {
+        display: none;
+    }
+
+}
+
+@media (max-width: 750px) {
+    #btnAddTask {
+        position: fixed;
+        top: 32%;
+        left: 5%;
+    }
+
+    #spongeBob {
+        display: none;
+    }
 }
 
 
 /*************************
  *        Footer
  *************************/
-
-#copyright {
-    color: white;
-    position: static;
-}
-
-@keyframes copyrightExpand {
-    0% {
-        letter-spacing: -0.5em;
-        transform: translateZ(-700px);
-        opacity: 0;
-    }
-
-    40% {
-        opacity: 0.6;
-    }
-
-    100% {
-        transform: translateZ(0);
-        opacity: 1;
-    }
-}
-
-.copyrightExpand {
-    animation: copyrightExpand 4s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+.add {
+    position: fixed;
+    bottom: 6%;
+    right: 3%;
 }
 
 #spongeBob {
-    height: 80px;
+    height: 70px;
+    margin-top: 40%;
+}
+
+#btnAddTask {
+    animation-name: btnAddTask;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: ease-in-out;
+}
+
+@keyframes btnAddTask {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }

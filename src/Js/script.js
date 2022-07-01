@@ -11,12 +11,19 @@ todaysDate.innerHTML = dateHeader;
 /*************************
  * VARIABLES
  *************************/
+// modal
+const dialog = document.querySelector("#modal");
+const modalHeading = document.querySelector("#modalHeading");
+const taskInputField = document.querySelector("#taskInput");
+const taskdateInputField = document.querySelector("#taskDateInput");
+const modalAddTaskBtn = document.querySelector("#btnAddNewTask");
+const exitBtn = document.querySelector("#btnExit");
+const addTaskBtn = document.querySelector("#btnAddTask");
 
 // Variables
-let inputText;
-let inputDate;
 let tasksArr = [];
 const todoWebApp = "todo-web-app";
+const body = document.querySelector(".body");
 
 // Edit Options
 let editTaskEl = "";
@@ -26,9 +33,6 @@ let editId = "";
 
 // Tasklist
 const taskList = document.querySelector("#listTasks");
-
-const taskInputField = document.querySelector("#taskInput");
-const taskdateInputField = document.querySelector("#taskDateInput");
 
 /*************************
  * CLASSES
@@ -66,23 +70,45 @@ class Task {
 }
 
 /*************************
+ *Event Listener for Modal
+ *************************/
+
+// Modal opens with background blur
+addTaskBtn.addEventListener("click", () => {
+  dialog.showModal();
+  body.classList.add("modal-open");
+});
+
+// Modal close
+exitBtn.addEventListener("click", () => {
+  dialog.close();
+  body.classList.remove("modal-open");
+});
+
+// Add new task
+modalAddTaskBtn.addEventListener("click", addTask);
+
+/*************************
  *       Add Taks
  *************************/
-function addUser() {
+function addTask(event) {
+  // Prevents page reload
+  event.preventDefault();
+
   // Stores userInput into variables
-  inputText = document.querySelector("#userInput").value;
-  inputDate = document.querySelector("#dateHeading").value;
+  let userInput = document.querySelector("#taskInput").value;
+  let userInputDate = document.querySelector("#taskDateInput").value;
 
   // Creates a unique ID for each new task
   let newtaskId = new Date().getTime().toString();
 
   // Makes the first letter an Uppercase letter
-  let inputTextTask = inputText.charAt(0).toUpperCase() + inputText.slice(1);
+  let userInputTask = userInput.charAt(0).toUpperCase() + userInput.slice(1);
 
   // If the input text is not empty and no tasks are being edited
-  if (inputTextTask !== "" && !editFlag) {
+  if (userInputTask !== "" && !editFlag) {
     // Instantiates a new object and combines the variables
-    let newTask = new Task(newtaskId, inputTextTask, inputDate);
+    let newTask = new Task(newtaskId, userInputTask, userInputDate);
 
     // Adds the object to empty array
     tasksArr.push(newTask);
@@ -126,6 +152,10 @@ function addUser() {
     // Adds list element to the DOM
     taskList.appendChild(listElement);
 
+    // modal close
+    dialog.close();
+    body.classList.remove("modal-open");
+
     // Task Completed (this task will be striked through)
     taskText.addEventListener("click", function () {
       taskText.classList.toggle("listItemCompleted");
@@ -134,10 +164,18 @@ function addUser() {
 
     addLocalStorage();
 
+    setBackToDefault();
+
     // If the task input field is not empty and the task is being edited
-  } else if (inputTextTask !== "" && editFlag) {
-    editTaskEl.innerHTML = inputTextTask;
+  } else if (userInputTask !== "" && editFlag) {
+    editTaskEl.innerHTML = userInputTask;
     editTaskDateEl.innerHTML = userInputDate;
+
+    // modal close
+    dialog.close();
+    body.classList.remove("modal-open");
+
+    setBackToDefault();
 
     // If the task input field is empty
   } else {
@@ -161,7 +199,7 @@ function deleteTask(event) {
 }
 
 /*************************
- *      Edit Tasks                    ATTENTION!!!!  THIS NEEDS WORK!
+ *      Edit Tasks
  *************************/
 
 function editTask(event) {
@@ -178,9 +216,16 @@ function editTask(event) {
   taskInputField.value = editTaskEl.innerHTML;
   taskdateInputField.value = editTaskDateEl.innerHTML;
 
+  // change modal heading
+  modalHeading.innerHTML = "Edit task";
+
   // change edit option variable values
   editId = element.dataset.id;
   editFlag = true;
+
+  // modal close
+  dialog.showModal();
+  body.classList.add("modal-open");
 }
 
 /**********************************
@@ -219,4 +264,16 @@ function clearLS() {
 
   // Clears the task list on the DOM
   document.getElementById("listTasks").innerHTML = " ";
+}
+
+/**********************************
+ *   Set Modal back to Default
+ *********************************/
+
+function setBackToDefault() {
+  taskInputField.value = "";
+  taskdateInputField.value = "";
+  editFlag = false;
+  editId = "";
+  modalHeading.innerHTML = "Add new task";
 }

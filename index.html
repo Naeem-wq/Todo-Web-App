@@ -47,25 +47,39 @@
 
 <body>
 
+    <!-- Modal -->
+
+    <dialog class="newTaskDialog" id="modal">
+        <form class="form">
+
+            <h2 class="modalHeading" id="modalHeading">Add new task</h2>
+
+            <input type="text" class="taskInput" id="taskInput" placeholder="Add new task" />
+
+            <input type="date" class="taskInput" id="taskDateInput" />
+
+            <button type="submit" class="addNewTaskBtn" id="btnAddNewTask">
+                <i class="fa-solid fa-circle-plus"></i>
+            </button>
+
+            <button type="button" class="exitBtn" id="btnExit">x</button>
+
+        </form>
+    </dialog>
+    <!-- End of Modal -->
+
     <!-- Header Section -->
-    <header>
+    <section class="body">
+        <header>
+            <div class="headerSection">
+                <h1 class="headerPopUp">To-do App</h1>
 
-        <div class="headerSection">
-            <h1 class="headerPopUp">To-do App</h1>
-            <span class="headerPopUp" id="headerDate"></span>
-        </div>
+                <span class="headerPopUp" id="headerDate"></span>
 
-
-        <div id="inputSection">
-            <input type="text" placeholder="Add Task" id="userInput">
-            <button id="addBtn" class="buttons" onclick="addUser()"><i class="fa-solid fa-circle-plus"></i></button>
-        </div>
-
-        <div id="calendar">
-            <input type="date" id="dateHeading">
-        </div>
-
-    </header>
+                <p id="copyright">© Naeem Witbooi 2022</p>
+            </div>
+        </header>
+    </section>
     <!-- End of Header Section -->
 
     <!-- Start of Main Section -->
@@ -81,7 +95,7 @@
             </button>
         </div>
 
-        <div class="container">
+        <div class="taskContainer">
             <ul class="taskList" id="listTasks">
                 <!-- Tasks will display here -->
             </ul>
@@ -93,10 +107,13 @@
     <!-- Footer -->
     <footer>
 
-        <div class="footer">
-            <p id="copyright" class="copyrightExpand">© Naeem Witbooi 2022</p>
+        <div class="add">
             <img src="/images/spongeBob.png" alt="Image of SpongeBob" id="spongeBob">
+
+            <button type="button" class="buttons" id="btnAddTask"><i class="fa-solid fa-circle-plus"></i>
+            </button>
         </div>
+
 
     </footer>
     <!-- End of Footer -->
